@@ -1,9 +1,8 @@
 const express = require('express');
-const ProductManager = require('./productManager'); 
+const ProductManager = require('../src/productManager'); 
 const app = express();
 const puerto = 8080;
-
-const gestorProducts = new ProductManager('./productos.json'); 
+const gestorProducts = new ProductManager('../productos.json'); 
 
 app.get('/products', async (req, res) => {
   try {
